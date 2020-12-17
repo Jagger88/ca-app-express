@@ -1,0 +1,35 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import Topnav from './topnav.component';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+<Meta title="Components/Topnav/TopnavMDX" />
+
+## Example of MDX story with story component
+
+This is useful if you want to include documentation along wiht your component. Here is what the component looks like so far.
+
+export const Template = (args) => <Topnav {...args} />
+
+<Canvas>
+  <Story name="Main" args={{
+  }}>
+    {Template.bind({})}
+   </Story>
+</Canvas>
+
+## Component To Do List
+- add properties
+    - logo
+    - company name
+- subcomponents
+    - navigation links (name, url)
+    - drop down
+    - buttons
+    - site search
+    - logout button
+    - alerts
+    - settings
+    - help
+
+
+

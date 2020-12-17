@@ -1,0 +1,6 @@
+export const GlobalActionTypes = {
+    CLEAR_DEBUGTEXT:'CLEAR_DEBUGTEXT',
+    ADD_DEBUGTEXT:'ADD_DEBUGTEXT',
+    TOGGLE_DEBUG:'TOGGLE_DEBUG'
+}
+

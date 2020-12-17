@@ -1,0 +1,113 @@
+import React from 'react';
+//import './sticky-page.styles.scss';
+import StickyNav from './sticky-nav.component';
+
+const StickyPage = ({data}) => (
+    <>
+        <StickyNav />
+        <div className='content'>
+                <span className='scrolled'>{data}</span><br></br><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+                       <h1>{data}</h1><br></br>
+       </div>
+        </>
+);
+
+export default StickyPage;
