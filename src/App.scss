@@ -1,6 +1,4 @@
-:root {
-  --color-primary: blue;
-}
+@import "./assets/css-variables.scss";
 
 
 .App {
@@ -11,22 +9,23 @@
 body {
   font-family: 'Quicksand', sans-serif;
   padding: 10px 10px;
-  background-color: --color-primary;
+  color: var(--primary-fontcolor);
+  font-size: var(--primary-fontsize);
 }
 
 a {
 text-decoration: none;
-  color: black;
+  color: var(--primary-fontsize);
 }
 
 a:visited {
 text-decoration: none;
-  color: black;
+  color:  var(--primary-fontsize);
 }
 
 a:hover {
 text-decoration: none;
-  color: black;
+  color:  var(--primary-fontsize);
 }
 
 * {

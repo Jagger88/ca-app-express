@@ -1,3 +1,21 @@
+.icon {
+  margin: 0px 5px;
+
+  &.rotate{
+    &:hover{
+      transform: scale(1.2,1.2) rotate(45deg) ;
+      cursor: pointer;
+    }
+  }
+
+  &.grow{
+    &:hover{
+      transform: scale(1.2,1.2);
+      cursor: pointer;
+    }
+  }
+}
+
 .header {
     height: 50px;
     width: 100%;
@@ -7,34 +25,29 @@
   
     .logo-container {
       height: 100%;
+      // width:fit-content;
       // width: 70px;
       // padding: 25px;
+      display: flex;
       
       img {
-        height: 30px;
-      }
-    }
-    
-    .icon{
-      &:hover{
-        transform: scale(1.2,1.2) rotate(45deg) ;
-        cursor: pointer;
-        
+        height: 40px;
+        object-fit: contain;
       }
     }
 
     .options {
       width: 50%;
       height: 100%;
+      font-size: 18px;
       display: flex;
       align-items: center;
       justify-content: flex-end;
- 
-
-  
+      
       .option {
         padding: 10px 15px;
         cursor: pointer;
       }
     }
+  
   }

@@ -1,6 +1,6 @@
 // allows for variables to store the colors
 $sub-color: grey;
-$main-color: black;
+$main-color:rgba(0, 0, 0, 0.6);
 
 
 // mixins allow for repeatable code to be entered once and copied dynamically into the scss file
@@ -18,7 +18,6 @@ $main-color: black;
     background: none;
     background-color: white;
     color: $sub-color;
-    font-size: 18px;
     padding: 10px 10px 10px 5px;
     display: block;
     width: 100%;
@@ -42,7 +41,6 @@ $main-color: black;
 
   .form-input-label {
     color: $sub-color;
-    font-size: 16px;
     font-weight: normal;
     position: absolute;
     pointer-events: none;

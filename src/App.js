@@ -1,11 +1,11 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 // import router-dom
 import { Switch, Route, Redirect  } from 'react-router-dom';
 
 // import pages and components
 import Header from './components/headers/main_header/main-header.component';
-import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
+// import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import DebugPanel from './components/debug-panel/debug-panel.component';
 import ImportJSONPage from './pages/importJSON/importjson.page';
 import EditorPage from './pages/editor-page/editor-page.component';
@@ -65,18 +65,20 @@ class App extends React.Component {
       <Header />
       {toggleDebug ? <DebugPanel /> : null}
       <Switch>
-        <Route exact path='/' component={LandingPage} />
-        <Route path='/ic' component={EditorPage} />
-        <Route exact path='/import' component={ImportJSONPage} />
-        <Route exact path='/signin'
+        <Route exact path='/'
           render={() => 
             this.props.currentUser ? (
+              <Redirect to='/ic' />
+            ) : (
+              <LandingPage />
+            )} />
+        <Route path='/ic' render={() => 
+            !this.props.currentUser ? (
               <Redirect to='/' />
             ) : (
-              <SignInAndSignUpPage />
-            )}
-        />
-        <Route path='/' component={LandingPage} />
+              <EditorPage />
+            )} />
+        <Route exact path='/import' component={ImportJSONPage} />
       </Switch>
       <Footer />
     </div>
