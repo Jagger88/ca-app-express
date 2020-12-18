@@ -3,7 +3,7 @@ import SquareButton from './squarebutton.component';
 import {BrowserRouter} from 'react-router-dom';
 
 export default {
-  title: 'Components/SquareButton',
+  title: 'Components/Buttons/SquareButton',
   component: SquareButton,
   decorators: [
     getStory => <BrowserRouter>{getStory()}</BrowserRouter>,

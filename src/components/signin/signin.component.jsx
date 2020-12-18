@@ -1,5 +1,5 @@
 import React from 'react';
-import FormInput from '../forminput/forminput.component';
+import FormInput from '../form/forminput/forminput.component';
 import SquareButton from '../buttons/squarebutton/squarebutton.component';
 import {auth, signInWithGoogle} from '../../firebase/firebase.utils';
 

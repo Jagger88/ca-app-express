@@ -1,6 +1,6 @@
 import React from 'react';
 import './importjson.styles.scss';
-import StoreJSON from '../../Components/store-json/store-json.components';
+import StoreJSON from '../../components/store-json/store-json.components';
 
 const ImportJSONPage = () => (
     <StoreJSON />

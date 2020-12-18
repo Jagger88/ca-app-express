@@ -3,7 +3,7 @@ import FormInput from './forminput.component';
 import {BrowserRouter} from 'react-router-dom';
 
 export default {
-  title: 'Components/FormInput',
+  title: 'Components/Form/Input',
   component: FormInput,
   decorators: [
     getStory => <BrowserRouter>{getStory()}</BrowserRouter>,

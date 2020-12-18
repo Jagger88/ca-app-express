@@ -1,0 +1,18 @@
+.footer-container {
+    // position: absolute;
+    // bottom: 20px;
+    width: 100vw;
+
+    .footer {
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        display: flex;
+        font-size: 12px;
+        // font-weight: 300;
+        
+        .item {
+            margin: 0px 10px;
+        }
+    }
+}

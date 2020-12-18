@@ -2,37 +2,35 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  padding: 10px 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+text-decoration: none;
+  color: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a:visited {
+text-decoration: none;
+  color: black;
 }
 
-.App-link {
-  color: #61dafb;
+a:hover {
+text-decoration: none;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+* {
+  box-sizing: border-box;
+
+}
+
+/* img will resize in the container that it is and have a maximum size based on it's own size... */
+img {
+  width:100%;
+  max-width: max-content;
+  object-fit: cover;
 }

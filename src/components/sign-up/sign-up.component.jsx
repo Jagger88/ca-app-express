@@ -1,6 +1,6 @@
 import React from 'react';
 import SquareButton from '../buttons/squarebutton/squarebutton.component';
-import FormInput from '../forminput/forminput.component'; 
+import FormInput from '../form/forminput/forminput.component'; 
 import './sign-up.styles.scss';
 import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
 

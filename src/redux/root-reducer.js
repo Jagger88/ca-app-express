@@ -5,11 +5,11 @@ import storage from 'redux-persist/lib/storage';
 //  this will use local storage as default
 // import sessionStorage from 'redux-persist/lib/storage/session' // this is for session storage...
 
-// import userReducer from './user/user-reducer';
-// import globalReducer from './global/global-reducer';
+import userReducer from './user/user-reducer';
+import globalReducer from './global/global-reducer';
 // import cartReducer from './cart/cart-reducer';
-// import editorReducer from './editor/editor-reducer';
-// import treeReducer from './tree/tree-reducer';
+import editorReducer from './editor/editor-reducer';
+import treeReducer from './tree/tree-reducer';
 // import shopReducer from './shop/shop-reducer';
 // import directoryReducer from './directory/directory-reducer';
 
@@ -23,11 +23,11 @@ const persistConfig = {
 //
 
 const rootReducer = combineReducers ({
-    // user: userReducer,
-    // global: globalReducer,
+    user: userReducer,
+    global: globalReducer,
     // cart: cartReducer,
-    // editor: editorReducer,
-    // tree: treeReducer,
+    editor: editorReducer,
+    tree: treeReducer,
     // shop: shopReducer,
     // directory: directoryReducer
 });

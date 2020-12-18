@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from './header.component';
+import Header from './main-header.component';
 import {BrowserRouter} from 'react-router-dom';
 
 export default {
-  title: 'Components/Header',
+  title: 'Components/Header/main-header',
   component: Header,
   decorators: [
     getStory => <BrowserRouter>{getStory()}</BrowserRouter>,
