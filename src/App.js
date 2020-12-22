@@ -5,7 +5,6 @@ import { Switch, Route, Redirect  } from 'react-router-dom';
 
 // import pages and components
 import Header from './components/headers/main_header/main-header.component';
-// import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import DebugPanel from './components/debug-panel/debug-panel.component';
 import ImportJSONPage from './pages/importJSON/importjson.page';
 import EditorPage from './pages/editor-page/editor-page.component';

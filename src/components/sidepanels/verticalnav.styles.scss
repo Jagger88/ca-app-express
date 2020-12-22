@@ -1,0 +1,50 @@
+@keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+
+
+.sidepanel {
+    position: relative; /* Sit on top of the page content */
+    width: 240px;
+    height:100vh;
+    transition-duration: 1s;
+    animation-duration: .5s;
+    animation-name: fadeIn;   
+
+    &.dark {
+        background-color: #151b26;
+        color:#cbd4db;
+        border-bottom: #cbd4db 1px;
+    }
+
+    .panelsection {
+        padding:20px 5px;
+        border-bottom: #aaaaaaa2 .5px inset;
+
+        &.dark {
+            color:#cbd4db;
+            border-bottom: #cbd4db 1px;
+        }
+    
+    }
+
+    .NavIcon {
+        margin: 0px 5px;
+        flex: 0 0 auto;
+        height: 18px;
+        width: 18px;
+        // fill: rgb(54, 54, 54);
+        fill:#151b26;
+        cursor: pointer;
+
+        &.dark {
+            fill:#cbd4db;
+        }
+    }
+}

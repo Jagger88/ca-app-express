@@ -2,7 +2,6 @@
 $sub-color: grey;
 $main-color:rgba(0, 0, 0, 0.6);
 
-
 // mixins allow for repeatable code to be entered once and copied dynamically into the scss file
 @mixin shrinkLabel {
   top: -14px;
@@ -12,7 +11,7 @@ $main-color:rgba(0, 0, 0, 0.6);
 
 .group {
   position: relative;
-  margin: 45px 0;
+  margin: 20px 0;
 
   .form-input {
     background: none;
@@ -24,7 +23,7 @@ $main-color:rgba(0, 0, 0, 0.6);
     border: none;
     border-radius: 0;
     border-bottom: 1px solid $sub-color;
-    margin: 25px 0;
+    // margin: 25px 0;
 
     &:focus {
       outline: none;

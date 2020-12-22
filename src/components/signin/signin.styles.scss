@@ -2,13 +2,27 @@
   width: 380px;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  margin: 10px 0px;
 
   .title {
     margin: 10px 0;
   }
 
-  .buttons {
-    display: flex;
-    justify-content: space-between;
+  .form-option {
+    color: #9ca6af;
+    width: 80%; 
+    border-bottom: 1px solid #9ca6af; 
+    line-height: 0.1em;
+    margin-top: 20px;
+    margin-left:auto;
+    margin-right:auto;
+ 
+    span { 
+     background:#fff; 
+     padding:0 10px; 
+    }
   }
+
 }
+

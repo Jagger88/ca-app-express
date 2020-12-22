@@ -1,5 +1,5 @@
 import React from 'react';
-import SignUp from './sign-up.component';
+import SignUp from './signup.component';
 import {BrowserRouter} from 'react-router-dom';
 
 export default {

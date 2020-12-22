@@ -1,7 +1,8 @@
 import React from 'react';
 import FormInput from '../form/forminput/forminput.component';
 import SquareButton from '../buttons/squarebutton/squarebutton.component';
-import {auth, signInWithGoogle} from '../../firebase/firebase.utils';
+import {auth} from '../../firebase/firebase.utils';
+import GoogleLogin from '../buttons/googlelogin/googlelogin.component';
 
 import './signin.styles.scss';
 
@@ -38,10 +39,12 @@ class SignIn extends React.Component {
 
   render() {
     return (
-      <div className='sign-in'>
-        <h2>I already have an account</h2>
-        <span>Sign in with your email and password</span>
-
+      <div className='sign-in' >
+        <GoogleLogin />
+        <div className="form-option">
+          <span>or</span>
+        </div>
+        {/* <span>Sign in with your email and password</span> */}
         <form onSubmit={this.handleSubmit}>
           <FormInput
             name='email'
@@ -60,10 +63,8 @@ class SignIn extends React.Component {
             required
           />
           <div className='buttons'>
-            <SquareButton type='submit'> Sign in </SquareButton>
-            <SquareButton type='button' onClick={signInWithGoogle} isGoogleSignIn>Sign in with Google</SquareButton>
+            <SquareButton type='submit'> Sign in with Email </SquareButton>
           </div>
-
         </form>
       </div>
     );

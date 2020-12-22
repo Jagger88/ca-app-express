@@ -1,7 +1,7 @@
 import React from 'react';
 import SquareButton from '../buttons/squarebutton/squarebutton.component';
 import FormInput from '../form/forminput/forminput.component'; 
-import './sign-up.styles.scss';
+import './signup.styles.scss';
 import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
 
 class SignUp extends React.Component {
@@ -32,13 +32,12 @@ class SignUp extends React.Component {
                 confirmPassword: ''
             })
 
-
             }
         catch (error) {
             // BF: future add better alert box. 
             // the error that comes back includes messages from the firebase authentication
             // this includes the password rules, email formatting, etc.  
-            console.log(error.message);
+            // console.log(error.message);
             alert(error.message);
         }
 
@@ -57,8 +56,7 @@ class SignUp extends React.Component {
 
         return (
             <div className='sign-up'>
-                <h2 className='title'>I do not have an account</h2>
-                <span>Sign up with your email and password</span>
+                <h2>Sign up with your email and password</h2>
                 <form className='sign-up-form' onSubmit={this.handleSubmit}>
                     <FormInput
                         type='text'

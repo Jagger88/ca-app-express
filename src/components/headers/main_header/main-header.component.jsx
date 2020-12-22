@@ -1,7 +1,7 @@
 // header.component.jsx
 import React from 'react';
 import './main-header.styles.scss';
-import logo from  '../../../assets/logo.png';
+import Logo from  '../../branding/logo.component';
 
 // fontawesome
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
@@ -20,6 +20,7 @@ import {selectDebugText} from '../../../redux/global/global.selector';
 import {selectCurrentUser} from '../../../redux/user/user.selector';
 
 
+
 const Header = ({currentUser, toggleDebugConsole, addDebugText}) => {
 
 const handleclick = (e) => {
@@ -34,7 +35,7 @@ return (
          {currentUser ? 
          <>
          <Link className='logo-container' to='/'>
-            <img src={logo} alt="Logo" />
+            <Logo />
         </Link>
         <div className='options'>
              <div className='option'>Welcome {currentUser.displayName}</div>

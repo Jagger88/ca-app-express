@@ -5,8 +5,12 @@ import './rc-tree.styles.scss';
 // redux
 import {connect} from 'react-redux';
 import {setCurrentNode, updateTree} from '../../redux/note/note.action';
-import {createStructuredSelector} from 'reselect';
-import {selectedNode, selectTree} from '../../redux/note/note.selector';
+
+// TO DO
+// import firestore
+//    get / save tree data
+//    get / save content
+// get selected node from the props that are passed from the 
 
 const STYLE = `
 .rc-tree-child-tree {
@@ -52,6 +56,7 @@ class TreeComponent extends React.Component {
       expandedKeys,
     });
   };
+
 
     onDrop = info => {
       // console.log('drop', info);
@@ -112,10 +117,13 @@ class TreeComponent extends React.Component {
         }
       }
 
-    // this.setState({
-    //     gData: data,
-    //   });
+    this.setState({
+        gData: data,
+      });
+
+      // THIS IS MY CUSTOM CODE TO ALSO PUT THE DATA INTO REDUX
       this.props.updateTree(data);
+
     };
 
   onExpand = expandedKeys => {
@@ -129,6 +137,9 @@ class TreeComponent extends React.Component {
   // rc-tree default action for node selection
   onSelect = (selectedKeys, info) => {
     // console.log('Selected: ' + info.node.key + ' in position ' + info.node.pos);
+    // you need to define the const from the props to bring a function from outside into the class
+    // in a const component you just add it to the parameters during definition.
+    // const {setCurrentNode} = this.props;
     this.props.setCurrentNode(info.node.key);
   };
 
@@ -136,9 +147,9 @@ class TreeComponent extends React.Component {
     const { expandedKeys } = this.state;
 
     return (
-      <div className="tree-container">
+      <div className="draggable-demo">
         <style dangerouslySetInnerHTML={{ __html: STYLE }} />
-        <Tree className='draggable-tree'
+        <Tree
           expandedKeys={expandedKeys}
           onExpand={this.onExpand}
           //checkable
@@ -152,25 +163,21 @@ class TreeComponent extends React.Component {
           onSelect={this.onSelect}
           treeData={this.state.gData}
           motion={motion}
-          // icon={this.state.icon}
-          showIcon={false}
-     
+          icon={this.state.icon}
         />
       </div>
     );
   }
 }
 
-const mapStateToProps = createStructuredSelector ({
-  selectedNode: selectedNode,
-  gData: selectTree,
-});
-
 const mapDispatchToProps = dispatch => ({
   setCurrentNode:info => dispatch(setCurrentNode(info)),
   updateTree:data=> dispatch(updateTree(data))
 });
 
-export default connect(mapStateToProps,mapDispatchToProps)(TreeComponent);
+
+
+
+export default connect(null,mapDispatchToProps)(TreeComponent);
 
 

@@ -1,9 +1,10 @@
-
 .rc-tree {
-    font-family: Open Sans;
     margin: 0;
     border: 1px solid transparent;
     
+    .customize-icon {
+        // background-color: white;
+    }
     
     &-focused:not(&-active-focused) {
         border-color: cyan;

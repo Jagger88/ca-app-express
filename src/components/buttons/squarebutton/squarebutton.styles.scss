@@ -1,35 +1,29 @@
 .squarebutton {
   min-width: 165px;
-  width: auto;
-  height: 50px;
-  letter-spacing: 0.5px;
-  line-height: 50px;
-  padding: 0 35px 0 35px;
-  font-size: 15px;
-  background-color: black;
+  width:100%;
+  background-color: #151b26;
   color: white;
-  text-transform: uppercase;
-  font-family: 'Open Sans Condensed';
-  font-weight: bolder;
-  border: none;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 6px;
+  box-sizing: border-box;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
+  flex-shrink: 0;
   justify-content: center;
-
+  overflow: hidden;
+  transition-duration: .2s;
+    transition-property: background,border,box-shadow,color,fill;
+        fill: #273240;
+        font-size: 16px;
+        height: 48px;
+        line-height: 48px;
+        padding: 0 16px;
+  
   &:hover {
     background-color: white;
     color: black;
     border: 1px solid black;
-  }
-
-  &.google-sign-in {
-    background-color: #4285f4;
-    color: white;
-
-    &:hover {
-      background-color: #357ae8;
-      border: none;
-    }
   }
 
   &.inverted {

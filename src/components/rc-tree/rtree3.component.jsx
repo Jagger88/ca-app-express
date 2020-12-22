@@ -1,8 +1,10 @@
 import React from 'react';
-
+// import { gData } from './utils/dataUtil';
 import Tree from 'rc-tree';
-import './rc-tree.styles.scss';
+// import STYLE from './rctree.scss';
 
+
+import './rctree.scss';
 
 const STYLE = `
 .rc-tree-child-tree {
@@ -27,17 +29,6 @@ const motion = {
   onLeaveActive: () => ({ height: 0 }),
 };
 
-// local data instead of importing
-// const gData =  gData: [
-  //   { title: '0-0', key: '0', children: [{ title: 'A', key: 'A' },{ title: 'B', key: 'B' }]},
-  //   { title: '0-1', key: '1'},
-  //   { title: '0-2', key: '2'},
-  //   { title: '0-3', key: '3'},
-  //   { title: '0-4', key: '4'},
-  //   { title: '0-5', key: '5'},
-  //   { title: '0-6', key: '6'},
-  // ];
-
 class TreeComponent extends React.Component {
     constructor(props){
         super(props);
@@ -51,33 +42,32 @@ class TreeComponent extends React.Component {
             // as such  (<span className='customize-icon'>x</span>), 
             icon: props.CustomIcon
         }
-    }
-
-
+    };
+    
   onDragEnter = ({ expandedKeys }) => {
-    console.log('enter', expandedKeys);
+    //console.log('enter', expandedKeys);
     this.setState({
       expandedKeys,
     });
   };
 
+
   onDrop = info => {
-    console.log('drop', info);
+    console.log(info);
     const dropKey = info.node.props.eventKey;
     const dragKey = info.dragNode.props.eventKey;
     const dropPos = info.node.props.pos.split('-');
     const dropPosition = info.dropPosition - Number(dropPos[dropPos.length - 1]);
 
     const loop = (data, key, callback) => {
-      data.forEach((item, index, arr) => {
-        if (item.key === key) {
-          callback(item, index, arr);
-          return;
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].key === key) {
+          return callback(data[i], i, data);
         }
-        if (item.children) {
-          loop(item.children, key, callback);
+        if (data[i].children) {
+          loop(data[i].children, key, callback);
         }
-      });
+      }
     };
     const data = [...this.state.gData];
 
@@ -92,8 +82,8 @@ class TreeComponent extends React.Component {
       // Drop on the content
       loop(data, dropKey, item => {
         item.children = item.children || [];
-        // where to insert
-        item.children.push(dragObj);
+        // where to insert 示例添加到头部，可以是随意位置
+        item.children.unshift(dragObj);
       });
     } else if (
       (info.node.props.children || []).length > 0 && // Has children
@@ -102,11 +92,12 @@ class TreeComponent extends React.Component {
     ) {
       loop(data, dropKey, item => {
         item.children = item.children || [];
-        // where to insert
+        // where to insert 示例添加到头部，可以是随意位置
         item.children.unshift(dragObj);
+        // in previous version, we use item.children.push(dragObj) to insert the
+        // item to the tail of the children
       });
     } else {
-      // Drop on the gap
       let ar;
       let i;
       loop(data, dropKey, (item, index, arr) => {
@@ -120,7 +111,7 @@ class TreeComponent extends React.Component {
       }
     }
 
-  this.setState({
+    this.setState({
       gData: data,
     });
   };
@@ -133,29 +124,23 @@ class TreeComponent extends React.Component {
     });
   };
 
+  // rc-tree default action for node selection
   onSelect = (selectedKeys, info) => {
-    console.log(selectedKeys);
-    console.log('Selected: ' + info.node.key + ' in position ' + info.node.pos);
-
-    // console.log('selected', selectedKeys, info);
-
-    // this.selKey = info.node.props.eventKey;
+    // console.log('Selected: ' + info.node.key + ' in position ' + info.node.pos);
+    // // you need to define the const from the props to bring a function from outside into the class
+    // // in a const component you just add it to the parameters during definition.
+    // // const {setCurrentNode} = this.props;
+    // this.props.setCurrentNode(info.node.key);
   };
-
-  //, e:{selected: bool, selectedNodes, node, event, nativeEvent})
-  
 
   render() {
     const { expandedKeys } = this.state;
-    const switcherIcon = obj => {
-        if (!obj.isLeaf) {
-        return (<span>X</span>);
-      }};
-  
+
     return (
-      <div className="draggable-demo">
-        <style dangerouslySetInnerHTML={{ __html: STYLE }} />
-        <Tree
+      <div className="rc-tree">
+        {/* <style dangerouslySetInnerHTML={{ __html: STYLE }} /> */}
+        <Tree className="rc-tree"
+          // blockNode
           expandedKeys={expandedKeys}
           onExpand={this.onExpand}
           //checkable
@@ -170,7 +155,6 @@ class TreeComponent extends React.Component {
           treeData={this.state.gData}
           motion={motion}
           icon={this.state.icon}
-          //switcherIcon={switcherIcon}
         />
       </div>
     );

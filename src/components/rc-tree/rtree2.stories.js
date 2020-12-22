@@ -1,8 +1,8 @@
 import React from 'react';
-import TreeComponent from './reduxtree.component';
+import TreeComponent from './rtree2.component';
 
 export default {
-  title: 'Components/Tree/Tree1',
+  title: 'Components/Tree/Tree2',
   component: TreeComponent,
   argTypes: {
     draggable: false,
