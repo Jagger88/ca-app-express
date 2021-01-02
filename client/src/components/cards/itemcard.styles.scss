@@ -1,0 +1,36 @@
+.itemcard {
+    padding: 10px;
+    display:flex;
+    width: 400px;
+    height:200px;
+    word-wrap: normal;
+    text-align: center;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+
+    .icon-container {
+        margin: 0 10px;
+        width: 150px;
+        
+        .img{
+            width: 125px;
+            height: 125px;
+            object-fit:cover;
+        }
+        
+    }
+
+    .name {
+        color: rgb(63, 62, 62);
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .description {
+        width: 300px;
+        overflow: scroll;
+        font-size: 14px;
+    }
+}

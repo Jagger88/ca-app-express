@@ -1,0 +1,10 @@
+.pricecards {
+    // width: 85vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px; // gap all around
+    // row-gap; if we wanted gaps only inbetween rows
+  }

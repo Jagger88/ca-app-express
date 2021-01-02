@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="14.540025mm"
+   height="11.959023mm"
+   viewBox="0 0 14.540025 11.959022"
+   version="1.1"
+   id="svg1103"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="favicon.svg">
+  <defs
+     id="defs1097" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="51.735126"
+     inkscape:cy="152.85835"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1267"
+     inkscape:window-height="967"
+     inkscape:window-x="1855"
+     inkscape:window-y="44"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata1100">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-84.513349,-80.955013)">
+    <ellipse
+       style="fill:#f21121;fill-opacity:0.790323;stroke-width:0.113305"
+       id="path939"
+       cx="90.59539"
+       cy="88.472672"
+       rx="4.3712478"
+       ry="4.4413638" />
+    <ellipse
+       style="fill:#ff6a0c;fill-opacity:0.822581;stroke-width:0.0606479"
+       id="ellipse943"
+       cx="86.820396"
+       cy="85.895378"
+       rx="2.3070476"
+       ry="2.4110258" />
+    <ellipse
+       style="fill:#3cbb34;fill-opacity:0.71371;stroke-width:0.0986881"
+       id="ellipse945"
+       cx="95.123627"
+       cy="89.122559"
+       rx="3.9297469"
+       ry="3.7479441" />
+    <ellipse
+       style="fill:#0a77de;fill-opacity:0.774193;stroke-width:0.0901898"
+       id="ellipse947"
+       cx="94.362038"
+       cy="84.433769"
+       rx="3.5360141"
+       ry="3.4787567" />
+  </g>
+</svg>

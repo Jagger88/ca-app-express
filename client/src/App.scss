@@ -1,0 +1,41 @@
+@import "./assets/css-variables.scss";
+
+
+.App {
+  // text-align: center;
+}
+
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  padding: 10px 10px;
+  color: var(--primary-fontcolor);
+  font-size: var(--primary-fontsize);
+}
+
+a {
+text-decoration: none;
+  color: var(--primary-fontsize);
+}
+
+a:visited {
+text-decoration: none;
+  color:  var(--primary-fontsize);
+}
+
+a:hover {
+text-decoration: none;
+  color:  var(--primary-fontsize);
+}
+
+* {
+  box-sizing: border-box;
+
+}
+
+/* img will resize in the container that it is and have a maximum size based on it's own size... */
+img {
+  width:100%;
+  max-width: max-content;
+  object-fit: cover;
+}

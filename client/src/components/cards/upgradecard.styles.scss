@@ -1,0 +1,37 @@
+.upgradecard {
+  width:200px;
+  height:200px;
+  align-items: center;
+  text-align: center;
+  border-width: 2px;
+  border-color: orange;
+  border-style: solid;
+  border-radius: 6px;
+  overflow: hidden;
+
+  .icon {
+    fill: orange;
+    position: absolute;
+    background-color: white;
+    width:30px;
+    height:30px;
+    left: 50%;
+
+  }
+
+  .title {
+    // background-color: white;
+    // text-align: center;
+    color:black;
+    font-size: 18;
+    font-weight:600;
+  }
+
+  .text {
+    // background-color: white;
+    // color: black;
+    // border: 1px solid black;
+    font-size: 12px;
+  }
+}
+

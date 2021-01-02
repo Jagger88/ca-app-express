@@ -1,5 +1,0 @@
-export const NoteActionTypes = {
-    UPDATE_TREE: 'UPDATE_TREE',
-    SET_CURRENT_NODE: 'SET_CURRENT_NODE',
-    UPDATE_CONTENT: 'UPDATE_CONTENT'
-}
