@@ -1,0 +1,6 @@
+This folder is the pure apollo GQL server folder
+db.js is used to instatiate the prisma client
+gqlserver.js is for setting up the gql server
+schema.js in the gql is for the graphql server... 
+
+there is a schema for the prisma ORM that I need to pay attention to as well...

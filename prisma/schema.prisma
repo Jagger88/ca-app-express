@@ -1,0 +1,54 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+ provider = "postgresql"
+ url      = env("DATABASE_URL")
+}
+
+// datasource db {
+//   provider = "mysql"
+//   url      = env("DATABASE_URL")
+// }
+
+// user:project 1-n
+// project:tree 1-n
+// project:widget n-n
+
+model User {
+  id         Int @id @default(autoincrement())
+  created_at DateTime @default(now())
+  email      String @unique
+  displayName       String?
+  projects   Project[]
+} 
+
+model Project {
+  id            Int      @id @default(autoincrement())
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  public        Boolean  @default(false)
+  name          String
+  description   String
+  primary       User    @relation(fields: [primaryId], references: [id])
+  primaryId     Int
+  treeData      Json?
+  tree          Tree[] 
+  widget        widget[]
+}
+
+model Tree {
+  id            Int       @id @default(autoincrement())
+  title         String
+  project       Project   @relation(fields: [projectId], references: [id])
+  projectId     Int       
+  cid           Int
+}
+
+model widget {
+  id            Int       @id @default(autoincrement())
+  value         String?
+  type          String?
+  project       Project[] @relation(references: [id])
+}
